@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.20.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
+</body>
+
+<script>
+  function holdjaro() {
+	
+	const arr1 = [0,0,0,0,0,0,0,0];
+	const arr2 = [0,0,0,0,0,0,0,0];
+	const arr3 = [0,0,0,0,0,0,0,0];
+	const arr4 = [0,0,0,0,0,0,0,0];
+	const arr5 = [0,0,0,0,0,0,0,0];
+	const arr6 = [0,0,0,0,0,0,0,0];
+	const arr7 = [0,0,0,0,0,0,0,0];
+	const arr8 = [0,0,0,0,0,0,0,0];
+	
+	const planet = [arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8];
+	const irany =['N','S','W','E'];
+	
+	const kezdopont = [1,1,'N'];
+
+}
+
+  QUnit.module('holdjaro', function() {
+  
+    QUnit.test('kezdopont-koordinata', function(assert) {
+      assert.equal(holdjaro(),(1,1));
+    });
+	
+	QUnit.test('alaphelyzet-irany', function(assert) {
+      assert.equal(holdjaro.irany(),('N'));
+    });
+	
+	QUnit.test('elore-koordinata', function(assert) {
+      assert.equal(holdjaro(),(2,1));
+    });
+	
+	QUnit.test('elore-irany', function(assert) {
+      assert.equal(holdjaro.irany(),('N'));
+    });
+	
+	QUnit.test('hatra-koordinata', function(assert) {
+      assert.equal(holdjaro(),(8,1));
+    });
+	
+	QUnit.test('hatra-irany', function(assert) {
+      assert.equal(holdjaro.irany(),('S'));
+    });
+	
+	QUnit.test('balra-koordinata a kezdoponttol', function(assert) {
+      assert.equal(holdjaro(),(1,8));
+    });
+	
+	QUnit.test('balra-koordinata', function(assert) {
+      assert.equal(holdjaro.irany(),('W'));
+    });
+	
+	QUnit.test('jobbra-koordinata a kezdoponttol', function(assert) {
+      assert.equal(holdjaro(),(1,2));
+    });
+	
+	QUnit.test('jobbra-koordinata', function(assert) {
+      assert.equal(holdjaro.irany(),('E'));
+    });
+	
+  });
+  
+</script>
